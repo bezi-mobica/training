@@ -1,8 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
-Podfile
-Podfile.lock
 Pods/
 training.xcodeproj/project.xcworkspace/xcuserdata/
 training.xcodeproj/xcuserdata/bezi.xcuserdatad/xcdebugger/
-training.xcworkspace/
