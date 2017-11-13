@@ -22,28 +22,51 @@ class ItemTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
         generateData()
+        initWork()
 
+        NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(appBecomeActive(_:)),
+                name: NSNotification.Name.UIApplicationDidBecomeActive,
+                object: nil)
+
+        NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(appGoBackground(_:)),
+                name: NSNotification.Name.UIApplicationDidEnterBackground,
+                object: nil)
+
+        triggerTask()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
+        super.viewDidDisappear(animated)
+    }
+
+    private func initWork() {
         work = DispatchWorkItem(block: {
             let randomIndex = Int(randomBelow: 10)
             self.items[randomIndex!] = String(randomSubStringCount: 10, randomStringLength: 10)
             self.triggerTask()
 
-            NSLog("Restarting work ")
+            NSLog("Trigger task again")
 
             DispatchQueue.main.async {
                 let indexPath = IndexPath(row: randomIndex!, section: 0)
                 self.tableView.reloadRows(at: [indexPath], with: .none)
             }
         })
-        
-        NSLog("Starting work ")
-        triggerTask()
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
+    func appGoBackground(_ notification: NSNotification) {
         work?.cancel()
-        NSLog("Stoping work ")
-        super.viewWillDisappear(animated)
+        work = nil
+    }
+
+    func appBecomeActive(_ notification: NSNotification) {
+        work?.perform()
+        triggerTask()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +75,7 @@ class ItemTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentCell = tableView.dequeueReusableCell(withIdentifier: celIdentifier, for: indexPath)
-        
+
         guard let cell = currentCell as? ItemTableViewCell else {
             NSLog("Cell is wrong type. Should be the \(celIdentifier)")
             return currentCell
@@ -71,8 +94,12 @@ class ItemTableViewController: UITableViewController {
     }
 
     private func triggerTask() {
-        if work != nil {
-            delay(by: .milliseconds(250), work!)
+        if work == nil {
+            initWork()
+        }
+
+        if let task = work {
+            delay(by: .milliseconds(250), task)
         }
     }
 }
