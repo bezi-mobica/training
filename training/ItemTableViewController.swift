@@ -41,6 +41,8 @@ class ItemTableViewController: UITableViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
+        work?.cancel()
+        work = nil
         super.viewDidDisappear(animated)
     }
 
