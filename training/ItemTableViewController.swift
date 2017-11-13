@@ -8,125 +8,71 @@
 
 import UIKit
 import HandySwift
+import Dispatch
 
 class ItemTableViewController: UITableViewController {
-    
-    var items: [String] = Array(repeating:"", count:10)
-    var isTrigeringTask = false
-    
+
     let celIdentifier = "ItemTableViewCell"
-    
+
+    var work: DispatchWorkItem? = nil
+    var items: [String] = Array(repeating: "", count: 10)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 44.0 
-        isTrigeringTask = true
-        trigereTask()
+        tableView.estimatedRowHeight = 44.0
         generateData()
-       
+
+        work = DispatchWorkItem(block: {
+            let randomIndex = Int(randomBelow: 10)
+            self.items[randomIndex!] = String(randomSubStringCount: 10, randomStringLength: 10)
+            self.triggerTask()
+
+            NSLog("Restarting work ")
+
+            DispatchQueue.main.async {
+                let indexPath = IndexPath(row: randomIndex!, section: 0)
+                self.tableView.reloadRows(at: [indexPath], with: .none)
+            }
+        })
+        
+        NSLog("Starting work ")
+        triggerTask()
     }
-    
-    override func didReceiveMemoryWarning() {
-        isTrigeringTask=false
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    override func viewWillDisappear(_ animated: Bool) {
+        work?.cancel()
+        NSLog("Stoping work ")
+        super.viewWillDisappear(animated)
     }
-    
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: celIdentifier, for: indexPath) as? ItemTableViewCell else {
-            fatalError("Cell is wrong type. Should be the " + celIdentifier)
+        let currentCell = tableView.dequeueReusableCell(withIdentifier: celIdentifier, for: indexPath)
+        
+        guard let cell = currentCell as? ItemTableViewCell else {
+            NSLog("Cell is wrong type. Should be the \(celIdentifier)")
+            return currentCell
         }
+
         cell.IdLabel.text = String(indexPath.row + 1)
         cell.TextLabel.text = items[indexPath.row]
+
         return cell
     }
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-    
-    private func generateData(){
+
+    private func generateData() {
         for index in items.indices {
-            items[index] = genereteString()
+            items[index] = String(randomSubStringCount: 10, randomStringLength: 10)
         }
     }
-    
-    private func genereteString()->String{
-        var result = ""
-        let randomSubStringCount:Int = Int(randomBelow: 10)! + 1
-        for _ in 0..<randomSubStringCount {
-            let randomStringLength = Int(randomBelow: 11)
-            result += String(randomWithLength: randomStringLength!, allowedCharactersType: .alphabetic) + " "
+
+    private func triggerTask() {
+        if work != nil {
+            delay(by: .milliseconds(250), work!)
         }
-        
-        return result
     }
-    
-    private func trigereTask(){
-        delay(by: .milliseconds(250), {
-            let randomIndex = Int(randomBelow: 10)
-            self.items[randomIndex!] = self.genereteString()
-            if self.isTrigeringTask {
-                self.trigereTask()
-            } else {
-                //do nothing
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        })
-    }
-    
 }
