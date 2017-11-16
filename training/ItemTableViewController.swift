@@ -56,7 +56,9 @@ class ItemTableViewController: UITableViewController {
 
             DispatchQueue.main.async {
                 let indexPath = IndexPath(row: randomIndex!, section: 0)
+                self.tableView.beginUpdates()
                 self.tableView.reloadRows(at: [indexPath], with: .none)
+                self.tableView.endUpdates()
             }
         })
     }
@@ -101,7 +103,7 @@ class ItemTableViewController: UITableViewController {
         }
 
         if let task = work {
-            delay(by: .milliseconds(250), task)
+            delay(by: .milliseconds(1000), task)
         }
     }
 }
