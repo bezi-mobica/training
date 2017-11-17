@@ -1,9 +1,6 @@
 //
-//  CharacterViewExtension.swift
-//  HandySwift
-//
-//  Created by Cihat Gündüz on 29.12.15.
-//  Copyright © 2015 Flinesoft. All rights reserved.
+// Created by Benedykt Ziobro on 13/11/2017.
+// Copyright (c) 2017 Benedykt Ziobro. All rights reserved.
 //
 
 import Foundation
@@ -16,18 +13,14 @@ extension String.CharacterView {
         return isEmpty ? nil : self[index(startIndex, offsetBy: Int(randomBelow: UInt32(count)))]
     }
 
-    /// Returns a given number of random characters from the `CharacterView`.
-    ///
-    /// - Parameters:
-    ///   - size: The number of random characters wanted.
-    /// - Returns: A `CharacterView` with the given number of random characters or `nil` if empty.
-    public func sample(size: Int) -> String.CharacterView? {
+    public func sample(size: UInt32) -> String.CharacterView {
         if isEmpty {
-            return nil
+            return String.CharacterView()
         }
 
         var sampleElements = String.CharacterView()
-        size.times {
+
+        for _ in 0..<size {
             sampleElements.append(sample!)
         }
 
