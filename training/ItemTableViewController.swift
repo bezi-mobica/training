@@ -56,6 +56,11 @@ class ItemTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 let indexPath = IndexPath(row: randomIndex, section: 0)
                 self.tableView.beginUpdates()
+
+                if let cell = self.tableView.cellForRow(at: indexPath) as? ItemTableViewCell {
+                    cell.TextLabel.text = self.items[randomIndex]
+                }
+
                 self.tableView.reloadRows(at: [indexPath], with: .none)
                 self.tableView.endUpdates()
             }
