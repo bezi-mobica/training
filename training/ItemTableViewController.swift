@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import HandySwift
 import Dispatch
 
 class ItemTableViewController: UITableViewController {
@@ -49,13 +48,13 @@ class ItemTableViewController: UITableViewController {
     private func initWork() {
         work = DispatchWorkItem(block: {
             let randomIndex = Int(randomBelow: 10)
-            self.items[randomIndex!] = String(randomSubStringCount: 10, randomStringLength: 10)
+            self.items[randomIndex] = String(randomSubStringCount: 10, randomStringLength: 10)
             self.triggerTask()
 
             NSLog("Trigger task again")
 
             DispatchQueue.main.async {
-                let indexPath = IndexPath(row: randomIndex!, section: 0)
+                let indexPath = IndexPath(row: randomIndex, section: 0)
                 self.tableView.beginUpdates()
                 self.tableView.reloadRows(at: [indexPath], with: .none)
                 self.tableView.endUpdates()
@@ -103,7 +102,7 @@ class ItemTableViewController: UITableViewController {
         }
 
         if let task = work {
-            delay(by: .milliseconds(1000), task)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: task)
         }
     }
 }

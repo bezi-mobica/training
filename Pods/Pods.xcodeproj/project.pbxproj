@@ -7,83 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0424E884863705807CF19363A60E7661 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D81C57481FE871E7B23AF9F017FA6 /* Globals.swift */; };
-		170825A57845F8ED27C397167493D40D /* Pods-training-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B54E996C5BD8651E4C36F8A12211F9 /* Pods-training-dummy.m */; };
-		1F74102E14C7B39E802E6845B5D347C7 /* DispatchTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA181FDE838A868CF56BA8818801C8 /* DispatchTimeIntervalExtension.swift */; };
-		3EF7D0A957ADF2B906BB958257F17D64 /* FrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B022ECB6096E1F4C1243A043726FB21 /* FrequencyTable.swift */; };
-		4A8CCB077A38A546C0C5703C50FEB21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		510A65F1633BD57FF909504A7FF37BD1 /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDD7BFD100AC48B9BFD1242A8BDA3C /* TimeIntervalExtension.swift */; };
-		61EF1C573EA183007FF30D33DA897918 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF37DAB13237C6DBABFA8FF3D9DA2B0 /* StringExtension.swift */; };
-		64F56664506C17276DD9A8E3B7F4D514 /* Pods-training-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 948F4C7F2FDC6E6E1BDD06A9484BE752 /* Pods-training-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DD3D7AD65500C706F2B4AA618178D61 /* CharacterViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4CA56475A24E25E125D833E8540E2 /* CharacterViewExtension.swift */; };
-		975D1B8A8D3C4C562698A8B9C5C57F0E /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E60BEECAF8E7ECC5B0625302A7E38F /* SortedArray.swift */; };
-		B05D9CEB582C4C8E322011AA5CD57254 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A8CB9376815A20F69413E02DF62F0 /* ArrayExtension.swift */; };
-		B3C06C74A23C8A7A25E58F0113445057 /* IntegerTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72FDADAE8135824772EBB25F70D0E38 /* IntegerTypeExtension.swift */; };
-		B8959921DBD5A8CB01D420AD87434D57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		BA45E1B58A00FBA6B96958DC30E517D1 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D968E3B3756B9F69B9286A996F0447 /* DictionaryExtension.swift */; };
-		C1F2D6B064939ABCC1966A205C97DDFE /* HandySwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 781426124204287CB5EED373BA617417 /* HandySwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6A77121C930EA64E8D809B5DD219135 /* HandySwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B85E4B32F3B9F6A019E26166C9F61 /* HandySwift-dummy.m */; };
-		F732E7C283DA770E9AE407A491E2133D /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10019E0CC8E4B221D1AC02EE79C1D177 /* IntExtension.swift */; };
+		1214D179F9DADA7563B6A8887E802039 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		82D3BB904DD5A60D032C3D2027C58AD8 /* Pods-training-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 948F4C7F2FDC6E6E1BDD06A9484BE752 /* Pods-training-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFAE2EEFE5F7BB4D4123A8FAEB8118CB /* Pods-training-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B54E996C5BD8651E4C36F8A12211F9 /* Pods-training-dummy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CB6B45CB265E0671D064A17DC1F5D6F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 286DC26D99E5B0681F27FDC8FCFEDD21;
-			remoteInfo = HandySwift;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		02D91E99F3ED65D1AC7CC1D117F2170A /* HandySwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HandySwift-prefix.pch"; sourceTree = "<group>"; };
-		10019E0CC8E4B221D1AC02EE79C1D177 /* IntExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntExtension.swift; path = Sources/Extensions/IntExtension.swift; sourceTree = "<group>"; };
-		13D4CA56475A24E25E125D833E8540E2 /* CharacterViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterViewExtension.swift; path = Sources/Extensions/CharacterViewExtension.swift; sourceTree = "<group>"; };
 		1B405AB01B179A76726B87278487D6D3 /* Pods-training-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-training-resources.sh"; sourceTree = "<group>"; };
-		1C3D81C57481FE871E7B23AF9F017FA6 /* Globals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = Sources/Globals.swift; sourceTree = "<group>"; };
-		1FF37DAB13237C6DBABFA8FF3D9DA2B0 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Sources/Extensions/StringExtension.swift; sourceTree = "<group>"; };
 		21C249EB243A64BEBF8BE0008B6FD989 /* Pods-training.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-training.release.xcconfig"; sourceTree = "<group>"; };
-		28BDD7BFD100AC48B9BFD1242A8BDA3C /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeIntervalExtension.swift; path = Sources/Extensions/TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		2BF07B126853CBBA285711A31B40D740 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35D968E3B3756B9F69B9286A996F0447 /* DictionaryExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtension.swift; path = Sources/Extensions/DictionaryExtension.swift; sourceTree = "<group>"; };
 		37B54E996C5BD8651E4C36F8A12211F9 /* Pods-training-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-training-dummy.m"; sourceTree = "<group>"; };
 		4B8D44468E867628AC291DE3BB6518DC /* Pods-training.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-training.debug.xcconfig"; sourceTree = "<group>"; };
-		58E7022747B17C61E42D404A1354C12B /* Pods_training.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_training.framework; path = "Pods-training.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B022ECB6096E1F4C1243A043726FB21 /* FrequencyTable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrequencyTable.swift; path = Sources/Structs/FrequencyTable.swift; sourceTree = "<group>"; };
-		63A4B05C3A1A44E0510489B61A581DD3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		70E60BEECAF8E7ECC5B0625302A7E38F /* SortedArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SortedArray.swift; path = Sources/Structs/SortedArray.swift; sourceTree = "<group>"; };
-		76CA181FDE838A868CF56BA8818801C8 /* DispatchTimeIntervalExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchTimeIntervalExtension.swift; path = Sources/Extensions/DispatchTimeIntervalExtension.swift; sourceTree = "<group>"; };
-		781426124204287CB5EED373BA617417 /* HandySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HandySwift-umbrella.h"; sourceTree = "<group>"; };
-		877B85E4B32F3B9F6A019E26166C9F61 /* HandySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HandySwift-dummy.m"; sourceTree = "<group>"; };
-		938A8CB9376815A20F69413E02DF62F0 /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Sources/Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		948F4C7F2FDC6E6E1BDD06A9484BE752 /* Pods-training-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-training-umbrella.h"; sourceTree = "<group>"; };
-		B29C176749AC9089404C66DE4DC0B8DC /* HandySwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HandySwift.xcconfig; sourceTree = "<group>"; };
-		C97D0196BBD876CE2824480AA25C7C93 /* HandySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HandySwift.framework; path = HandySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D72FDADAE8135824772EBB25F70D0E38 /* IntegerTypeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegerTypeExtension.swift; path = Sources/Extensions/IntegerTypeExtension.swift; sourceTree = "<group>"; };
+		B191039F468782BE91CE2BA3739AAB39 /* Pods_training.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_training.framework; path = "Pods-training.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA37A3BB75F66E87BB2E4E020C759BEA /* Pods-training-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-training-frameworks.sh"; sourceTree = "<group>"; };
-		E3EB746285637AED85EEB2294295140B /* HandySwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HandySwift.modulemap; sourceTree = "<group>"; };
 		F7C87A26FB0ADE7F908E475A3B1671CD /* Pods-training.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-training.modulemap"; sourceTree = "<group>"; };
 		FE24B9A51C63B319FF68483B50A32811 /* Pods-training-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-training-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FED65FDA65659352049EB5837B94F0E3 /* Pods-training-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-training-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		352D650DD58E0CD17CAC6E4C17827E6E /* Frameworks */ = {
+		65EE15BE65AE048B06B85A6AFA4ED7E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A8CCB077A38A546C0C5703C50FEB21A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7F639D85C7E38D095158F872F3610D8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B8959921DBD5A8CB01D420AD87434D57 /* Foundation.framework in Frameworks */,
+				1214D179F9DADA7563B6A8887E802039 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,32 +58,12 @@
 			path = "Target Support Files/Pods-training";
 			sourceTree = "<group>";
 		};
-		25DF3BE0DFB8D95A6F971172340FBF2F /* HandySwift */ = {
+		631BFD57D73097DEF8F7021EC92E42DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				938A8CB9376815A20F69413E02DF62F0 /* ArrayExtension.swift */,
-				13D4CA56475A24E25E125D833E8540E2 /* CharacterViewExtension.swift */,
-				35D968E3B3756B9F69B9286A996F0447 /* DictionaryExtension.swift */,
-				76CA181FDE838A868CF56BA8818801C8 /* DispatchTimeIntervalExtension.swift */,
-				5B022ECB6096E1F4C1243A043726FB21 /* FrequencyTable.swift */,
-				1C3D81C57481FE871E7B23AF9F017FA6 /* Globals.swift */,
-				D72FDADAE8135824772EBB25F70D0E38 /* IntegerTypeExtension.swift */,
-				10019E0CC8E4B221D1AC02EE79C1D177 /* IntExtension.swift */,
-				70E60BEECAF8E7ECC5B0625302A7E38F /* SortedArray.swift */,
-				1FF37DAB13237C6DBABFA8FF3D9DA2B0 /* StringExtension.swift */,
-				28BDD7BFD100AC48B9BFD1242A8BDA3C /* TimeIntervalExtension.swift */,
-				B3B740587EEBC56F359C5493E35C9205 /* Support Files */,
+				B191039F468782BE91CE2BA3739AAB39 /* Pods_training.framework */,
 			);
-			name = HandySwift;
-			path = HandySwift;
-			sourceTree = "<group>";
-		};
-		2A2F14036AE448EF2CA4EDC44E974AB5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				25DF3BE0DFB8D95A6F971172340FBF2F /* HandySwift */,
-			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -141,8 +71,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				2A2F14036AE448EF2CA4EDC44E974AB5 /* Pods */,
-				F31A2128AC14ECAC7E0ED96DE5B9E433 /* Products */,
+				631BFD57D73097DEF8F7021EC92E42DF /* Products */,
 				8B408D31C06F422DC21FA5EF16F8BE88 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -153,20 +82,6 @@
 				1D40986477F41147D29800466539B387 /* Pods-training */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B3B740587EEBC56F359C5493E35C9205 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E3EB746285637AED85EEB2294295140B /* HandySwift.modulemap */,
-				B29C176749AC9089404C66DE4DC0B8DC /* HandySwift.xcconfig */,
-				877B85E4B32F3B9F6A019E26166C9F61 /* HandySwift-dummy.m */,
-				02D91E99F3ED65D1AC7CC1D117F2170A /* HandySwift-prefix.pch */,
-				781426124204287CB5EED373BA617417 /* HandySwift-umbrella.h */,
-				63A4B05C3A1A44E0510489B61A581DD3 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HandySwift";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -185,70 +100,35 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F31A2128AC14ECAC7E0ED96DE5B9E433 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C97D0196BBD876CE2824480AA25C7C93 /* HandySwift.framework */,
-				58E7022747B17C61E42D404A1354C12B /* Pods_training.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A10BD38CA9635142066906ADE05451C5 /* Headers */ = {
+		B7F7794FB90C62FD36F8180E10D25498 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64F56664506C17276DD9A8E3B7F4D514 /* Pods-training-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D181FF5F8993A08170EB5B97A9F06F08 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1F2D6B064939ABCC1966A205C97DDFE /* HandySwift-umbrella.h in Headers */,
+				82D3BB904DD5A60D032C3D2027C58AD8 /* Pods-training-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		07571743736DB643A53A816516E8E0E2 /* Pods-training */ = {
+		07330322B712EBD3B15FC1FD010BC53F /* Pods-training */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 62A4CA32EC7D1DD8B2A38BD677EAAF6F /* Build configuration list for PBXNativeTarget "Pods-training" */;
+			buildConfigurationList = 204DCAF3E0010F1A7F89E9B742D76F55 /* Build configuration list for PBXNativeTarget "Pods-training" */;
 			buildPhases = (
-				B6683081873E04A383974778D0826737 /* Sources */,
-				352D650DD58E0CD17CAC6E4C17827E6E /* Frameworks */,
-				A10BD38CA9635142066906ADE05451C5 /* Headers */,
+				D9F21F1B4D9E14203AA84255DAA6311B /* Sources */,
+				65EE15BE65AE048B06B85A6AFA4ED7E5 /* Frameworks */,
+				B7F7794FB90C62FD36F8180E10D25498 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DF9D73213274B78A3A6A2B791F6108B1 /* PBXTargetDependency */,
 			);
 			name = "Pods-training";
 			productName = "Pods-training";
-			productReference = 58E7022747B17C61E42D404A1354C12B /* Pods_training.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		286DC26D99E5B0681F27FDC8FCFEDD21 /* HandySwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D961A594AAEB4B75CF543134441E2E9A /* Build configuration list for PBXNativeTarget "HandySwift" */;
-			buildPhases = (
-				B7CF7581CA9C339C1CF02FFB0A23D0E1 /* Sources */,
-				A7F639D85C7E38D095158F872F3610D8 /* Frameworks */,
-				D181FF5F8993A08170EB5B97A9F06F08 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HandySwift;
-			productName = HandySwift;
-			productReference = C97D0196BBD876CE2824480AA25C7C93 /* HandySwift.framework */;
+			productReference = B191039F468782BE91CE2BA3739AAB39 /* Pods_training.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -268,87 +148,27 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F31A2128AC14ECAC7E0ED96DE5B9E433 /* Products */;
+			productRefGroup = 631BFD57D73097DEF8F7021EC92E42DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				286DC26D99E5B0681F27FDC8FCFEDD21 /* HandySwift */,
-				07571743736DB643A53A816516E8E0E2 /* Pods-training */,
+				07330322B712EBD3B15FC1FD010BC53F /* Pods-training */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B6683081873E04A383974778D0826737 /* Sources */ = {
+		D9F21F1B4D9E14203AA84255DAA6311B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170825A57845F8ED27C397167493D40D /* Pods-training-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7CF7581CA9C339C1CF02FFB0A23D0E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B05D9CEB582C4C8E322011AA5CD57254 /* ArrayExtension.swift in Sources */,
-				8DD3D7AD65500C706F2B4AA618178D61 /* CharacterViewExtension.swift in Sources */,
-				BA45E1B58A00FBA6B96958DC30E517D1 /* DictionaryExtension.swift in Sources */,
-				1F74102E14C7B39E802E6845B5D347C7 /* DispatchTimeIntervalExtension.swift in Sources */,
-				3EF7D0A957ADF2B906BB958257F17D64 /* FrequencyTable.swift in Sources */,
-				0424E884863705807CF19363A60E7661 /* Globals.swift in Sources */,
-				F6A77121C930EA64E8D809B5DD219135 /* HandySwift-dummy.m in Sources */,
-				B3C06C74A23C8A7A25E58F0113445057 /* IntegerTypeExtension.swift in Sources */,
-				F732E7C283DA770E9AE407A491E2133D /* IntExtension.swift in Sources */,
-				975D1B8A8D3C4C562698A8B9C5C57F0E /* SortedArray.swift in Sources */,
-				61EF1C573EA183007FF30D33DA897918 /* StringExtension.swift in Sources */,
-				510A65F1633BD57FF909504A7FF37BD1 /* TimeIntervalExtension.swift in Sources */,
+				FFAE2EEFE5F7BB4D4123A8FAEB8118CB /* Pods-training-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		DF9D73213274B78A3A6A2B791F6108B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HandySwift;
-			target = 286DC26D99E5B0681F27FDC8FCFEDD21 /* HandySwift */;
-			targetProxy = CB6B45CB265E0671D064A17DC1F5D6F1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		3A14C1C90F1F8E6ABD34C20BB015C05C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B29C176749AC9089404C66DE4DC0B8DC /* HandySwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HandySwift/HandySwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HandySwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HandySwift/HandySwift.modulemap";
-				PRODUCT_NAME = HandySwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		621AB785940626574F07364CB14760E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -404,9 +224,9 @@
 			};
 			name = Release;
 		};
-		68EEC7815B4EE5695BF519A6CAE1A9AC /* Release */ = {
+		8B3B3ED10EF77122797E3EB3C06C702F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B29C176749AC9089404C66DE4DC0B8DC /* HandySwift.xcconfig */;
+			baseConfigurationReference = 4B8D44468E867628AC291DE3BB6518DC /* Pods-training.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -417,26 +237,26 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HandySwift/HandySwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HandySwift/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-training/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HandySwift/HandySwift.modulemap";
-				PRODUCT_NAME = HandySwift;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-training/Pods-training.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_training;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		6A578A2B683EA3C32F584A6A790E7C82 /* Release */ = {
+		A1B521232BA9BAAA74AE092D856AF8B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21C249EB243A64BEBF8BE0008B6FD989 /* Pods-training.release.xcconfig */;
 			buildSettings = {
@@ -462,7 +282,6 @@
 				PRODUCT_NAME = Pods_training;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -530,66 +349,23 @@
 			};
 			name = Debug;
 		};
-		DBDEBD42FA2C66999BE2611FD154E757 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B8D44468E867628AC291DE3BB6518DC /* Pods-training.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-training/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-training/Pods-training.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_training;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		204DCAF3E0010F1A7F89E9B742D76F55 /* Build configuration list for PBXNativeTarget "Pods-training" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B3B3ED10EF77122797E3EB3C06C702F /* Debug */,
+				A1B521232BA9BAAA74AE092D856AF8B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B57C09D404C607DDE283C5C44183B2A1 /* Debug */,
 				621AB785940626574F07364CB14760E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		62A4CA32EC7D1DD8B2A38BD677EAAF6F /* Build configuration list for PBXNativeTarget "Pods-training" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DBDEBD42FA2C66999BE2611FD154E757 /* Debug */,
-				6A578A2B683EA3C32F584A6A790E7C82 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D961A594AAEB4B75CF543134441E2E9A /* Build configuration list for PBXNativeTarget "HandySwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A14C1C90F1F8E6ABD34C20BB015C05C /* Debug */,
-				68EEC7815B4EE5695BF519A6CAE1A9AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

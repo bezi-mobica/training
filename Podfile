@@ -9,5 +9,5 @@ target 'training' do
 
   # Pods for training
 
-  pod 'HandySwift'
+  # pod 'HandySwift'
 end

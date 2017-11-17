@@ -4,33 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>HandySwift.xcscheme</key>
+		<key>Pods-training.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Pods-training.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false />
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>07571743736DB643A53A816516E8E0E2</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
-		<key>286DC26D99E5B0681F27FDC8FCFEDD21</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
-	</dict>
+	<dict />
 </dict>
 </plist>

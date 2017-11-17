@@ -9,11 +9,11 @@
 import Foundation
 
 extension String.CharacterView {
-    /// Returns a random character from the `ChracterView`.
+    /// Returns a random character from the `CharacterView`.
     ///
     /// - Returns: A random character from the `CharacterView` or `nil` if empty.
     public var sample: Character? {
-        return isEmpty ? nil : self[index(startIndex, offsetBy: Int(randomBelow: count)!)]
+        return isEmpty ? nil : self[index(startIndex, offsetBy: Int(randomBelow: UInt32(count)))]
     }
 
     /// Returns a given number of random characters from the `CharacterView`.
@@ -22,10 +22,14 @@ extension String.CharacterView {
     ///   - size: The number of random characters wanted.
     /// - Returns: A `CharacterView` with the given number of random characters or `nil` if empty.
     public func sample(size: Int) -> String.CharacterView? {
-        if isEmpty { return nil }
+        if isEmpty {
+            return nil
+        }
 
         var sampleElements = String.CharacterView()
-        size.times { sampleElements.append(sample!) }
+        size.times {
+            sampleElements.append(sample!)
+        }
 
         return sampleElements
     }
