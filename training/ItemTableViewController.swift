@@ -61,19 +61,17 @@ class ItemTableViewController: UITableViewController {
                     cell.TextLabel.text = self.items[randomIndex]
                 }
 
-                self.tableView.reloadRows(at: [indexPath], with: .none)
                 self.tableView.endUpdates()
             }
         })
     }
 
-    func appGoBackground(_ notification: NSNotification) {
+    @objc func appGoBackground(_ notification: NSNotification) {
         work?.cancel()
         work = nil
     }
 
-    func appBecomeActive(_ notification: NSNotification) {
-        work?.perform()
+    @objc func appBecomeActive(_ notification: NSNotification) {
         triggerTask()
     }
 

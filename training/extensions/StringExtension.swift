@@ -17,13 +17,13 @@ extension String {
             result += String(randomWithLength: subStringLength) + " "
         }
 
-        self.init(result)!
+        self.init(result)
     }
 
     public init(randomWithLength length: UInt32) {
         let allowedCharsString: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
-        self.init(allowedCharsString.characters.sample(size: length))
+        self.init(allowedCharsString.sample(size: length))
     }
 
     public var isBlank: Bool {
@@ -32,5 +32,23 @@ extension String {
 
     public func stripped() -> String {
         return trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    public var sample: Character? {
+        return isEmpty ? nil : self[index(startIndex, offsetBy: Int(randomBelow: UInt32(count)))]
+    }
+    
+    public func sample(size: UInt32) -> String {
+        if isEmpty {
+            return String()
+        }
+        
+        var sampleElements = String()
+        
+        for _ in 0..<size {
+            sampleElements.append(sample!)
+        }
+        
+        return sampleElements
     }
 }
