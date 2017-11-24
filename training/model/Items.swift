@@ -6,31 +6,32 @@
 import Foundation
 
 
-struct Items {
+struct Items: Codable {
     var items: [String]
 }
 
 extension Items {
 
-    static let url = URL(string: "http://private-031502-iostraining1.apiary-mock.com/data")
+    static let url = URL(string: "https://private-031502-iostraining1.apiary-mock.com/data_test")
 
-    static func getJson(jsonHandler: @escaping([String]) -> Void) {
+    static func getItems(itemsHandler: @escaping(Items) -> Void) {
         if let url = url {
 
             let session = URLSession.shared
             session.dataTask(with: url, completionHandler: { data, _, _ in
 
                 if let data = data {
-                    let json = try? JSONSerialization.jsonObject(with: data) as! [String]
-                    jsonHandler(json!)
-                }
+                    let decoder = JSONDecoder()
 
+                    do {
+                        let items = try decoder.decode(Items.self, from: data)
+                        itemsHandler(items)
+                    } catch {
+                        NSLog("Can't parse date: \(error)")
+                    }
+                }
 
             }).resume()
         }
-    }
-
-    init(json: [String]) {
-        items = json
     }
 }
