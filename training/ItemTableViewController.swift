@@ -14,69 +14,34 @@ class ItemTableViewController: UITableViewController {
     let celIdentifier = "ItemTableViewCell"
 
     var work: DispatchWorkItem? = nil
-    var items: [String] = Array(repeating: "", count: 10)
+    var data: Items = Items(items: [String]())
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
-        generateData()
-        initWork()
-
-        NotificationCenter.default.addObserver(
-                self,
-                selector: #selector(appBecomeActive(_:)),
-                name: NSNotification.Name.UIApplicationDidBecomeActive,
-                object: nil)
-
-        NotificationCenter.default.addObserver(
-                self,
-                selector: #selector(appGoBackground(_:)),
-                name: NSNotification.Name.UIApplicationDidEnterBackground,
-                object: nil)
-
-        triggerTask()
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self)
-        work?.cancel()
-        work = nil
-        super.viewDidDisappear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getItems()
     }
 
-    private func initWork() {
-        work = DispatchWorkItem(block: {
-            let randomIndex = Int(randomBelow: 10)
-            self.items[randomIndex] = String(randomSubStringCount: 10, randomStringLength: 10)
-            self.triggerTask()
+    private func getItems() {
+        let alert = UIAlertController(title: "Connecting", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        self.present(alert, animated: true)
 
-            NSLog("Trigger task again")
-
+        Items.getItems(itemsHandler: { items in
             DispatchQueue.main.async {
-                let indexPath = IndexPath(row: randomIndex, section: 0)
-                self.tableView.beginUpdates()
-
-                if let cell = self.tableView.cellForRow(at: indexPath) as? ItemTableViewCell {
-                    cell.TextLabel.text = self.items[randomIndex]
-                }
-
-                self.tableView.endUpdates()
+                self.data = items
+                self.tableView.reloadData()
+                alert.dismiss(animated: true)
             }
         })
     }
 
-    @objc func appGoBackground(_ notification: NSNotification) {
-        work?.cancel()
-        work = nil
-    }
-
-    @objc func appBecomeActive(_ notification: NSNotification) {
-        triggerTask()
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return data.items.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,24 +53,18 @@ class ItemTableViewController: UITableViewController {
         }
 
         cell.IdLabel.text = String(indexPath.row + 1)
-        cell.TextLabel.text = items[indexPath.row]
+        cell.TextLabel.text = data.items[indexPath.row]
 
         return cell
     }
 
-    private func generateData() {
-        for index in items.indices {
-            items[index] = String(randomSubStringCount: 10, randomStringLength: 10)
-        }
+    override func becomeFirstResponder() -> Bool {
+        return true
     }
 
-    private func triggerTask() {
-        if work == nil {
-            initWork()
-        }
-
-        if let task = work {
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: task)
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            getItems()
         }
     }
 }
